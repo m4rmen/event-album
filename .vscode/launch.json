@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Server",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/server/index.mjs",
+      "cwd": "${workspaceFolder}/server",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Client",
+      "program": "${workspaceFolder}/client/node_modules/vite/bin/vite.js",
+      "args": ["--open"],
+      "cwd": "${workspaceFolder}/client",
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Client and Server",
+      "configurations": ["Server", "Client"],
+      "stopAll": true
+    }
+  ]
+}
