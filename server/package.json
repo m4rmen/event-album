@@ -12,6 +12,8 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1176.0",
+    "@vercel/oidc-aws-credentials-provider": "^3.3.21",
     "express": "^5.3.0"
   }
 }
